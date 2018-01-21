@@ -1,0 +1,55 @@
+<article id="content">
+    <div class="col-12">
+
+      <h2 class="doc-title">Dom Manipulation</h2>
+    </div>
+
+    <h4 class="doc-subtitle">Getting Started</h4>
+    <p class="hr"></p>
+    <p class="text">With Mei.js we have two simple methods to use. Both have the option to handle a function or just save the element in a simple variable. <span class="highlight"> In both methods you can pass any css selector to access him.</span> Let's take a look!</p>
+
+    <h4 class="doc-subtitle">getElement: </h4> <small class="strong">Return a specific element</small> 
+    <br><br>
+    <small class="highlight">Mei.getElement('element');</small>
+    <p class="hr"></p>
+
+    <pre><code lang="javascript">
+  <span class="variable">const</span> <span class="attr">element</span> <span class="equal">=</span> <span class="mei">Mei</span>.<span class="name">getElement</span><span class="normal">(</span><span class="string">&#x27;#myelement&#x27;</span><span class="normal">);</span>
+</code>
+</pre>
+
+<h4 class="doc-subtitle">getElement with an event handler: </h4> <small class="strong">set an event to an element.</small> 
+<br><br>
+<small class="highlight">Mei.getElement('element', 'event', callback)</small>
+    <p class="hr"></p>
+
+    <pre><code lang="javascript">
+  <span class="mei">Mei</span>.<span class="name">getElement</span><span class="normal">(</span><span class="string">&#x27;#myelement&#x27;</span>,<span class="string">&#x27;click&#x27;</span>, <span class="name">() =&#x3E;</span> <span class="normal">{</span>
+    <span class="comment">// code</span>
+  <span class="normal">});</span> 
+</code>
+</pre>
+
+
+<h4 class="doc-subtitle">getElements: </h4> <small class="strong">Return an array of elements.</small> 
+<br><br>
+<small class="highlight">Mei.getElements('elements');</small>
+<p class="hr"></p>
+
+<pre><code lang="javascript">
+  <span class="variable">const</span> <span class="attr">elements</span> <span class="equal">=</span> <span class="mei">Mei</span>.<span class="name">getElements</span><span class="normal">(</span><span class="string">&#x27;#myelements&#x27;</span><span class="normal">);</span>
+</code>
+</pre>
+
+<h4 class="doc-subtitle">getElements with an event handler: </h4> <small class="strong">Set the same event for every element selected. This practice is <span class="highlight-danger">Not so recommended.</span> Use <a href="https://davidwalsh.name/event-delegate" target="_blank" class="name">event delegation</a> instead. </small></span> </small> 
+<br><br>
+<small class="highlight">Mei.getElements('elements', 'event', callback)</small> 
+<p class="hr"></p>
+
+<pre><code lang="javascript">
+  <span class="mei">Mei</span>.<span class="name">getElements</span><span class="normal">(</span><span class="string">&#x27;#myelements&#x27;</span>,<span class="string">&#x27;click&#x27;</span>, <span class="name">() =&#x3E;</span> <span class="normal">{</span>
+      <span class="comment">// code</span>
+  <span class="normal">});</span> 
+</code>
+</pre>
+  </article>

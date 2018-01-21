@@ -1,0 +1,69 @@
+<article id="content">
+    <div class="col-12">
+  
+      <h2 class="doc-title">Storage</h2>
+    </div>
+  
+    <h4 class="doc-subtitle">Getting Started</h4>
+    <p class="hr"></p>
+    <p class="text">The storage is a great feature that we have. With Mei you are going to be more easy! Let's see</p>
+  
+    <h4 class="doc-subtitle">store: </h4> <small class="strong">This method defines the type of store and you can define the item to save.</small> 
+    <br><br>
+    <small class="highlight">Mei.store({attributes});</small>
+    <p class="hr"></p>
+  
+    <pre><code lang="javascript">
+  <span class="variable">let</span> <span class="attr">users</span> <span class="equal">=</span> <span class="normal">[{</span><span class="attr">name</span><span class="normal">:</span> <span class="string">'John'</span><span class="normal">}, {</span><span class="attr">name</span><span class="normal">:</span> <span class="string">'Nick'</span><span class="normal">}];</span>
+  <span class="comment">// This will create a 'users' item in a localStorage way.</span>      
+  <span class="mei">Mei</span>.<span class="name">store</span><span class="normal">(</span><span class="normal">{
+    <span class="attr">store</span>: <span class="string">'local'</span>,
+    <span class="attr">item</span>: <span class="string">'users'</span>,
+    <span class="attr">data</span>: <span class="">users</span>
+  });</span>
+
+  <span class="comment">// This will create a 'users' item in a sessionStorage way.</span>
+  <span class="mei">Mei</span>.<span class="name">store</span><span class="normal">(</span><span class="normal">{
+    <span class="attr">store</span>: <span class="string">'session'</span>,
+    <span class="attr">item</span>: <span class="string">'users'</span>,
+    <span class="attr">data</span>: <span class="">users</span>
+  });</span>
+      </code></pre>
+
+  <h4 class="doc-subtitle">clearStore: </h4> <small class="strong">This will clear all records saved according to the type of storage.</small> 
+  <br><br>
+  <small class="highlight">Mei.clearStore('type');</small>
+    <p class="hr"></p>
+<pre><code lang="javascript">
+  <span class="comment">// This will clear all records saved in the localStorage.</span>
+  <span class="mei">Mei</span>.<span class="name">clearStore</span><span class="normal">(</span><span class="string">&#x27;local&#x27;</span><span class="normal">);</span>
+
+  <span class="comment">// This will clear all records saved in the sessionStorage.</span>
+  <span class="mei">Mei</span>.<span class="name">clearStore</span><span class="normal">(</span><span class="string">&#x27;session&#x27;</span><span class="normal">);</span></code> </pre>
+
+      <h4 class="doc-subtitle">removeItemStore: </h4> <small class="strong">This will clear all records saved according to the type of storage.</small> 
+      <br><br>
+      <small class="highlight">Mei.removeItemStore('type', 'item');</small>
+        <p class="hr"></p>
+<pre><code lang="javascript">
+  <span class="comment">// This will clear all records saved in the localStorage.</span>
+  <span class="mei">Mei</span>.<span class="name">removeItemStore</span><span class="normal">(</span><span class="string">&#x27;local&#x27;</span><span class="normal">);</span>
+    
+  <span class="comment">// This will clear all records saved in the sessionStorage.</span>
+  <span class="mei">Mei</span>.<span class="name">removeItemStore</span><span class="normal">(</span><span class="string">&#x27;session&#x27;</span><span class="normal">);</span></code> </pre>
+  
+  
+  <h4 class="doc-subtitle">displayStore: </h4> <small class="strong">.</small> 
+  <br><br>
+  <small class="highlight">Mei.displayStore('type', 'item');</small>
+  <p class="hr"></p>
+  
+  <pre><code lang="javascript">
+  <span class="comment">// outputting all the records that match with the 'users' localStorage item.</span>
+  <span class="attr">console</span>.<span class="name">log</span><span class="normal">(</span><span class="mei">Mei</span>.<span class="name">displayStore</span><span class="normal">(</span><span class="string">&#x27;local&#x27;</span>, <span class="string">&#x27;users&#x27;</span><span class="normal">)</span><span class="normal">);</span>
+
+  <span class="comment">// outputting all the records that match with the 'users' sessionStorage item.</span>
+  <span class="attr">console</span>.<span class="name">log</span><span class="normal">(</span><span class="mei">Mei</span>.<span class="name">displayStore</span><span class="normal">(</span><span class="string">&#x27;session&#x27;</span>, <span class="string">&#x27;users&#x27;</span><span class="normal">)</span><span class="normal">);</span>  </code> </pre>
+  </code>
+  </pre>
+  </article>

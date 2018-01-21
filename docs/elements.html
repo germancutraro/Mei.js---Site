@@ -1,0 +1,76 @@
+<article id="content">
+  <div class="col-12">
+
+    <h2 class="doc-title">Changing the DOM</h2>
+  </div>
+
+  <h4 class="doc-subtitle">Getting Started</h4>
+  <p class="hr"></p>
+  <p class="text">Mei have three methods to use one for create elements, one for delete a specific element an the last one is for clone a element. Let's take a look!</p>
+
+  <h4 class="doc-subtitle">createElement: </h4> <small class="strong">create a element in the document. You can specified any valid attribute.</small> 
+  <br><br>
+  <small class="highlight">Mei.createElement('element', {attributes});</small>
+  <p class="hr"></p>
+
+<pre><code lang="javascript">
+  <span class="comment">// This will create a 'h1' element</span>
+  <span class="mei">Mei</span>.<span class="name">createElement</span><span class="normal">(</span><span class="string">&#x27;h1&#x27;</span><span class="normal">, {
+    <span class="attr">textContent</span>: <span class="string">'Hello World!'</span>,
+    <span class="attr">className</span>: <span class="string">'title'</span>,
+    <span class="attr">id</span>: <span class="string">'title-js'</span>,
+    <span class="attr">parent</span>: <span class="normal">document.body</span>
+  });</span>
+
+    <span class="comment">// This will create a 'a' element</span>
+  <span class="mei">Mei</span>.<span class="name">createElement</span><span class="normal">(</span><span class="string">&#x27;a&#x27;</span><span class="normal">, {
+    <span class="attr">textContent</span>: <span class="string">'Mei.js'</span>,
+    <span class="attr">href</span>: <span class="string">'https://github.com/germancutraro'</span>,
+    <span class="attr">target</span>: <span class="string">'_blank'</span>,
+    <span class="attr">parent</span>: <span class="normal">document.body</span>
+  });</span>
+
+  <span class="comment">// Creating Childs</span>
+  <span class="mei">Mei</span>.<span class="name">createElement</span><span class="normal">(</span><span class="string">&#x27;ul&#x27;</span><span class="normal">, {
+    <span class="attr">id</span>: <span class="string">'list-item'</span>,
+    <span class="attr">parent</span>: <span class="normal">document.body</span>,
+    <span class="attr">children</span>: <span class="normal">[{
+      <span class="attr">element</span>: <span class="string">'li'</span>,
+      <span class="attr">textContent</span>: <span class="string">'Item-1'</span>,
+      <span class="attr">class</span>: <span class="string">'item'</span>
+    }]</span>
+  });</span>
+    </code></pre>
+    <small class="highlight">parent: </small> <small class="normal">You can specified any existing element here.</small> <br>
+    <small class="highlight">children: </small> <small class="normal">You must pass an array of objects. The <span>parent</span> will be the first element created.</small>
+<br>
+<h4 class="doc-subtitle">removeElement: </h4> <small class="strong">delete the last element as a parameter.</small> 
+<br><br>
+<small class="highlight">Mei.removeElement('element');</small>
+  <p class="hr"></p>
+
+<pre><code lang="javascript">
+  <span class="comment">// This will remove the last 'ul' that we created.</span>
+  <span class="mei">Mei</span>.<span class="name">removeElement</span><span class="normal">(</span><span class="string">&#x27;#list-item&#x27;</span><span class="normal">);</span> 
+
+  <span class="comment">// Or you can remove a element when you are selecting it.</span>
+  <span class="mei">Mei</span>.<span class="name">removeElement</span><span class="normal">(</span><span class="mei">Mei</span>.<span class="name">getElement</span><span class="normal">(</span><span class="string">'#list-item'</span><span class="normal">));</span>   
+</code>
+</pre>
+
+
+<h4 class="doc-subtitle">cloneElement: </h4> <small class="strong">Copy a element.</small> 
+<br><br>
+<small class="highlight">Mei.cloneElement('element');</small>
+<p class="hr"></p>
+
+<pre><code lang="javascript">
+  <span class="comment">// Cloning the 'h1' that we created</span>
+  <span class="variable">let</span> <span class="attr">h1</span> <span class="equal">=</span> <span class="mei">Mei</span>.<span class="name">getElement</span><span class="normal">(</span><span class="string">'.title'</span><span class="normal">);</span> 
+  <span class="variable">let</span> <span class="attr">newH1</span> <span class="equal">=</span> <span class="mei">Mei</span>.<span class="name">cloneElement</span><span class="normal">(</span><span class="string">'.title'</span><span class="normal">);</span></span> 
+
+  <span class="comment">// printing out</span>
+  <span class="attr">console</span>.<span class="name">log</span><span class="normal">(</span><span>newH1</span><span class="normal">);</span>
+</code>
+</pre>
+</article>

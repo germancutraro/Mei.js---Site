@@ -1,0 +1,38 @@
+.logo-wrapper {
+  margin-bottom: 3px;
+}
+
+.main-content {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center
+}
+
+.btn {
+  text-decoration: none;
+  padding: 15px 10px;
+  margin: 3px;
+}
+
+.branch {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #F8F9FA;
+  .author-wrapper {
+    font-size: .9em;
+    color: #50596C;
+    word-spacing: 1.5px;
+    text-align: center;
+    font-weight: normal;
+  }
+  .fa-heart {
+    color: #D45A89;
+    font-size: .8em;
+  }
+  a {
+    text-decoration: none;
+  }
+}
