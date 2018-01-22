@@ -1,15 +1,16 @@
 // DOM EVENT
-Mei.getElement('#dom-doc', 'click', e => callDoc(e, 'dom.html'));  
+Mei.getElement('#dom-doc', 'click', e => callDoc(e, 'dom.html', 'Mei.js - DOM Manipulation'));  
 // CHANGE DOM
-Mei.getElement('#changing-doc', 'click', e => callDoc(e, 'elements.html'));  
+Mei.getElement('#changing-doc', 'click', e => callDoc(e, 'elements.html', 'Mei.js - Changing the DOM'));  
 // Storage
-Mei.getElement('#storage-doc', 'click', e => callDoc(e, 'storage.html'));  
+Mei.getElement('#storage-doc', 'click', e => callDoc(e, 'storage.html', 'Mei.js - Storage'));  
 // Examples
-Mei.getElement('#examples-doc', 'click', e => callDoc(e, 'examples.html'));  
+Mei.getElement('#examples-doc', 'click', e => callDoc(e, 'examples.html', 'Mei.js - Examples'));  
 
 
-function callDoc(e, filename) {
+function callDoc(e, filename, section) {
   const content = Mei.getElement('#content');
+  document.title = section;
   let path = `./docs/${filename}`;
   // ajax request
   const xhr = new XMLHttpRequest();

@@ -5,14 +5,18 @@
   <link href="assets/images/favicon.ico" rel="shortcut icon"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#191C25">
+  <meta name="description" content=">Mei.js is a small library designed to develop common tasks in a quicker and easier way. It is still a library that
+  has to grow, but in the current version you can manipulate the DOM, create, copy and delete elements, use localStorage
+  and sessionStorage, access HTTP methods and other tasks such as creating random numbers and more, all this from
+  an easy way.">
+  <meta name="author" content="Germán Cutraro">
+  <meta name="theme-color" content="#333447">
   <title>Mei.Js - Documentation</title>
   <link rel="stylesheet" href="assets/css/simple-grid.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/main.min.css">
 </head>
-
 <body>
   <main class="main-container-documentation">
     <a href="#nav" class="open-nav fa fa-bars" id="menu-icon"></a>
@@ -63,12 +67,12 @@
           <br>
           <ul>
             <li class="text">Development:
-              <a href="">
+              <a style="text-decoration: underline;">
                 <span class="highlight">mei.js</span>
               </a>
             </li>
             <li class="text">Production:
-              <a href="">
+              <a style="text-decoration: underline;">
                 <span class="highlight">mei.min.js</span>
               </a>
             </li>
@@ -78,10 +82,10 @@
 
 <pre><code lang="html">
   <span class="comment">&#x3C;!-- Production --&#x3E;</span>
-  <span class="name">&lt;script</span> <span class="attr">src</span><span class="equal">=</span><span class="string">"https://unpkg.com/meijs"</span><span class="name">&gt;&lt;/script&gt</span>
+  <span class="name">&lt;script</span> <span class="attr">src</span><span class="equal">=</span><span class="string">"https://unpkg.com/meijs@1.0.3/dist/mei.min.js"</span><span class="name">&gt;&lt;/script&gt</span>
 
   <span class="comment">&#x3C;!-- Development --&#x3E;</span>
-  <span class="name">&lt;script</span> <span class="attr">src=</span><span class="string">"https://unpkg.com/meijs"</span><span class="name">&gt;&lt;/script&gt</span>
+  <span class="name">&lt;script</span> <span class="attr">src=</span><span class="string">"https://unpkg.com/meijs@1.0.3/dist/mei.js"</span><span class="name">&gt;&lt;/script&gt</span>
   </code></pre>
 
 
@@ -100,10 +104,10 @@
           <div class="mt"></div>
           <pre class="last-pre"><code lang="javascript">
   <span class="comment">// Production</span>
-  <span class="variable">const</span> <span class="attr">Mei</span> <span class="comment">=</span> <span class="name">require</span><span class="normal">(</span><span class="string">'meijs'</span><span class="normal">);</span> 
+  <span class="variable">const</span> <span class="attr">Mei</span> <span class="comment">=</span> <span class="name">require</span><span class="normal">(</span><span class="string">'meijs/dist/mei.min.js'</span><span class="normal">);</span> 
 
   <span class="comment">// Development</span>
-  <span class="variable">const</span> <span class="attr">Mei</span> <span class="comment">=</span> <span class="name">require</span><span class="normal">(</span><span class="string">'dist/meijs'</span><span class="normal">);</span>  
+  <span class="variable">const</span> <span class="attr">Mei</span> <span class="comment">=</span> <span class="name">require</span><span class="normal">(</span><span class="string">'meijs/dist/mei.js'</span><span class="normal">);</span>  
 </code>
 </pre>
         </article>
@@ -112,6 +116,5 @@
   </main>
     <script src="assets/js/mei.min.js"></script>
     <script src="assets/js/index.js"></script>
-
 </body>
 </html>
