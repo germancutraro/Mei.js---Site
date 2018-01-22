@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: http:// http://ogp.me/ns#">
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+  <meta property="fb:app_id" content="302184056577324" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://germancutraro.github.io/Meijs/" />
+  <meta property="og:title" content="Mei.js Website" />
+  <meta property="og:image" content="images/mei.png" />
   <meta charset="UTF-8">
   <link href="assets/images/favicon.ico" rel="shortcut icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,30 +15,26 @@
   and sessionStorage, all this from an easy way.">
   <meta name="author" content="Germán Cutraro">
   <meta name="theme-color" content="#333447">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://cdn-images-1.medium.com/max/800/1*1sjezDayyz8QLkHorw2zKA.png">
-  <meta property="og:image:url" content="https://cdn-images-1.medium.com/max/800/1*1sjezDayyz8QLkHorw2zKA.png">
-  <meta property="og:title" content="Mei.js - a minimal, simple and helpful library for you">
-  <meta property="og:site_name" content="Mei.js - a minimal, simple and helpful library for you">
-  <meta property="og:description" content="Mei.js is a small library designed to develop common tasks in a quicker and easier way. It is still a library that has to grow, but in the current version you can manipulate the DOM, create, copy and delete elements, and use localStorage
-  and sessionStorage, all this from an easy way.">
   <title>Mei.Js - Documentation</title>
   <link rel="stylesheet" href="assets/css/simple-grid.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/main.min.css">
 </head>
+
 <body>
   <main class="main-container-documentation">
     <a href="#nav" class="open-nav fa fa-bars" id="menu-icon"></a>
     <nav class="main-nav-guide nav" id="nav">
       <a href="#" class="fa fa-times cross"></a>
-      <h2 class="logo-wrapper"><a href="https://germancutraro.github.io/Meijs/" class="logo-nav">Mei.js</a></h2>
+      <h2 class="logo-wrapper">
+        <a href="https://germancutraro.github.io/Meijs/" class="logo-nav">Mei.js</a>
+      </h2>
       <hr>
       <ul class="docs-list">
-          <li>
-              <a id="start-doc" href="documentation.html">Getting Started</a>
-          </li>
+        <li>
+          <a id="start-doc" href="documentation.html">Getting Started</a>
+        </li>
         <li>
           <a id="dom-doc">Dom Manipulation</a>
         </li>
@@ -44,8 +45,8 @@
           <a id="storage-doc">Storage</a>
         </li>
         <li>
-            <a id="examples-doc">Examples</a>
-          </li>
+          <a id="examples-doc">Examples</a>
+        </li>
       </ul>
     </nav>
     <div class="container-guide">
@@ -59,8 +60,8 @@
           <h4 class="doc-subtitle">What is Mei.js?</h4>
           <p class="hr"></p>
           <p class="text">Mei.js is a small library designed to develop common tasks in a quicker and easier way. It is still a library that
-            has to grow, but in the current version you can manipulate the DOM, create, copy and delete elements, and use localStorage
-            and sessionStorage, all this from an easy way.</p>
+            has to grow, but in the current version you can manipulate the DOM, create, copy and delete elements, and use
+            localStorage and sessionStorage, all this from an easy way.</p>
 
 
           <h4 class="doc-subtitle">Getting Started</h4>
@@ -85,7 +86,7 @@
           <h4 class="doc-subtitle">CDN</h4>
           <p class="hr"></p>
 
-<pre><code lang="html">
+          <pre><code lang="html">
   <span class="comment">&#x3C;!-- Production --&#x3E;</span>
   <span class="name">&lt;script</span> <span class="attr">src</span><span class="equal">=</span><span class="string">"https://unpkg.com/meijs@1.0.3/dist/mei.min.js"</span><span class="name">&gt;&lt;/script&gt</span>
 
@@ -119,7 +120,8 @@
       </div>
     </div>
   </main>
-    <script src="assets/js/mei.min.js"></script>
-    <script src="assets/js/index.js"></script>
+  <script src="assets/js/mei.min.js"></script>
+  <script src="assets/js/index.js"></script>
 </body>
+
 </html>
